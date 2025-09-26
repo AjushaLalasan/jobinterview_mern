@@ -1,0 +1,193 @@
+/* App.css */
+
+/* Reset default margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body and font */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f5f7fa;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+/* Container wrapper */
+div {
+  max-width: 900px;
+  margin: auto;
+}
+
+/* Navigation styling */
+nav {
+  margin-bottom: 30px;
+  background-color: #007bff;
+  padding: 15px 25px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 25px;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #d1e7ff;
+}
+
+/* Headings */
+h1, h2 {
+  margin-bottom: 15px;
+  color: #222;
+}
+
+/* Form styling */
+
+/* Each form row stacked vertically */
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 15px;
+}
+
+/* Label above inputs */
+form label {
+  margin-bottom: 0px;
+  font-weight: 600;
+  color: #444;
+}
+
+/* Force fixed height for inputs to ensure tall box */
+form input[type="text"],
+form input[type="date"] {
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+  height: 50px;
+  padding: 12px 15px;
+  font-size: 18px;
+  line-height: 1.4;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Textarea bigger height and padding */
+form textarea {
+  width: 100%;
+  max-width: 700px;
+  min-width: 300px;
+  height: 140px;
+  padding: 12px 15px;
+  font-size: 16px;
+  resize: vertical;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  transition: border-color 0.3s ease;
+}
+
+/* Focus states */
+form input[type="text"]:focus,
+form input[type="date"]:focus,
+form textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Buttons */
+button {
+  padding: 10px 18px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Table styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 15px;
+  background-color: white;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+th, td {
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  text-align: left;
+  font-size: 15px;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  font-weight: 700;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Responsive table for small screens */
+@media (max-width: 700px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+
+  thead tr {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 15px;
+    border-bottom: 2px solid #ddd;
+  }
+
+  td {
+    border: none;
+    padding-left: 50%;
+    position: relative;
+  }
+
+  td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+}
+
+/* Responsive form layout - optional */
+@media (max-width: 600px) {
+  form div {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  form label {
+    margin-bottom: 6px;
+  }
+}
